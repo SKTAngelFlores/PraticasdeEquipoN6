@@ -1,0 +1,38 @@
+<script>
+
+    var pregunta=prompt("Escribe tu nombre :");
+
+    var prometido = ["Alejandra", "Ema","Karla","Cesar"];
+    var lugar = ["Mexico","Japon","Chie","Francia","Italia","Corea"];
+    var auto =["Bici","Coche","Camion"];
+    var edad = ["20", "25", "18","23", "19", "22", "26"];
+    var hogar = ["Casa", "Mansion", "Apartamento", "Hacienda"];
+
+        let final = juego();
+        console.log(final);
+
+    function juego (texto){
+    let prometidoNuevo = prometido[Aleatorio(0,prometido.length-1)];
+    let lugarNuevo = lugar[Aleatorio(0,lugar.length-1)];
+    let autoNuevo = auto[Aleatorio(0,auto.length-1)];
+    let edadNuevo = edad[Aleatorio(0,auto.length)];
+    let hogarNuevo = hogar[Aleatorio(0,hogar.length)];
+
+
+    let arreglo = {
+            Tunombre:pregunta,
+            prometido: prometidoNuevo,
+            lugar: lugarNuevo,
+            auto: autoNuevo,
+            edad: edadNuevo,
+            hogar: hogarNuevo,
+        }
+        return arreglo;
+        }
+
+    function Aleatorio(min, max) {
+        return Math.floor(Math.random() * (max - min + 1)) + min;
+    }
+
+
+    </script>
