@@ -1,0 +1,31 @@
+<script>
+
+var participantes = prompt("Ingresa tu nombre");
+var direccion =["Avenida Pablo Aviles", "Calle Rosales","Calle Tabasco"];
+var es=["Has Ganado", "Has Perdido"];
+
+
+    let final = sorteo();
+     console.log(final);
+
+function sorteo(texto){
+
+    let direccionNuevo = direccion[Aleatorio(0,direccion.length-1)];
+
+    let nuevoes=es[Aleatorio(0,es.length-1)];
+
+
+    let loteria= {
+        participantes:participantes,
+        direccion:direccionNuevo,
+        es:nuevoes,
+    
+    }
+    return loteria;
+}
+
+function Aleatorio(min, max) {
+    return Math.floor(Math.random() * (max - min + 1)) + min;
+}
+
+</script>
