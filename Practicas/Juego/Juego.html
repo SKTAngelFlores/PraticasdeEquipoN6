@@ -1,16 +1,20 @@
 <script>
-
+    
+    //Entrada de pregunta 
     var pregunta=prompt("Escribe tu nombre :");
-
+    
+    //Datos de arreglo
     var prometido = ["Alejandra", "Ema","Karla","Cesar"];
     var lugar = ["Mexico","Japon","Chie","Francia","Italia","Corea"];
     var auto =["Bici","Coche","Camion"];
     var edad = ["20", "25", "18","23", "19", "22", "26"];
     var hogar = ["Casa", "Mansion", "Apartamento", "Hacienda"];
-
+    
+    //Imprimir Juego
         let final = juego();
         console.log(final);
-
+    
+    //Datos aleatorios    
     function juego (texto){
     let prometidoNuevo = prometido[Aleatorio(0,prometido.length-1)];
     let lugarNuevo = lugar[Aleatorio(0,lugar.length-1)];
@@ -18,7 +22,7 @@
     let edadNuevo = edad[Aleatorio(0,auto.length)];
     let hogarNuevo = hogar[Aleatorio(0,hogar.length)];
 
-
+    //Imprimir nuevos datos con (Aleatorio)
     let arreglo = {
             Tunombre:pregunta,
             prometido: prometidoNuevo,
@@ -29,10 +33,11 @@
         }
         return arreglo;
         }
-
+    
+    //Funcion Para Datos Aleatorios 
     function Aleatorio(min, max) {
         return Math.floor(Math.random() * (max - min + 1)) + min;
-    }s
+    }
 
 
     </script>
